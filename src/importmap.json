@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@4.4.1/lib/system/single-spa.min.js",
+    "@originalApp/masterPage": "http://localhost:4200/main.js",
+    "@originalApp/disciplineCatalogFront": "http://localhost:4201/main.js",
+    "@originalApp/classScheduleFront": "http://localhost:4202/main.js"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Plataforma Germinare</title>
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <script type="systemjs-importmap" src="/src/importmap.json"></script>
+  <% if (isLocal) { %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@polyglot-mf/root-config": "http://localhost:9000/polyglot-mf-root-config.js"
+      }
+    }
+  </script>
+  <% } %>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@4.4.1/lib/system/single-spa.min.js" as="script"
+    crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/zone.js/dist/zone.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.10.1/dist/import-map-overrides.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.1.9/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.1.9/dist/extras/amd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.1.9/dist/extras/named-exports.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.1.9/dist/extras/named-register.min.js"></script>
+</head>
+
+<body>
+  <script>
+    System.import('@polyglot-mf/root-config');
+  </script>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+
+</html>
